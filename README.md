@@ -1,3 +1,5 @@
+![Jean-Claude Van Damme, the AppSec specialist: OWASP Top 10, ASVS and LLM security, read-only by default](assets/banner.webp)
+
 # jean-claude-van-damme
 
 A Claude skill for security review and secure coding. It covers the OWASP Top 10, ASVS, LLM/agent risks, secrets, supply chain and insecure defaults, with diff-based review and false-positive triage. It is read-only by default: it reports findings and proposes fixes without editing code unless asked.
@@ -166,7 +168,7 @@ It checks the structure of every case and tests each pattern-based grader agains
 The command compares results with the skill against a baseline without it. It calls real models and is charged to your account, so set a ceiling with `--max-cost-usd`.
 
 ```bash
-claude plugin eval . --no-publish --max-cost-usd 5
+claude plugin eval . --no-publish --judge-model sonnet --max-cost-usd 5
 ```
 
 Run them before and after changing the skill. Results are written to `evals/results/`, which is ignored by Git.
