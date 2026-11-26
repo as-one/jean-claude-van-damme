@@ -8,7 +8,7 @@
       "name": "jean-claude-van-damme",
       "source": "./",
       "description": "Security review and secure coding skill: OWASP Top 10, ASVS, LLM/agent risks, secrets, supply chain, and diff-based review with false-positive triage.",
-      "version": "0.3.0",
+      "version": "0.4.0",
       "category": "security"
     }
   ]

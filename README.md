@@ -92,12 +92,13 @@ skills/
   jean-claude-van-damme/
     SKILL.md               # workflow, triage rubric, report format
     reference/             # read only when the review needs it
+      review-checklist.md  # coverage checklist by topic
       owasp-codes.md       # short index of OWASP and ASVS IDs
       owasp-top10.md       # Top 10:2025 in detail, with examples
       asvs.md              # ASVS 5.0 requirements by chapter and level
       owasp-ai.md          # LLM and Agentic Top 10 (2026) in detail
-      languages.md         # pitfalls for 19 language groups, SSRF, uploads, secrets
-      iac-and-ci.md        # CI/CD, lockfiles, SBOM and signing, containers, cloud, headers
+      languages.md         # pitfalls and examples for 19 language groups, SSRF, uploads, secrets
+      iac-and-ci.md        # CI/CD, lockfiles, SBOM and signing, containers, cloud, headers, with examples
 evals/                     # test cases for `claude plugin eval`
 ```
 
@@ -113,7 +114,7 @@ Run them before and after changing the skill. Results are written to `evals/resu
 
 ## Updating the codes
 
-OWASP editions change over time. Once a year, check the sources listed in `reference/owasp-codes.md`, update `owasp-codes.md`, `owasp-top10.md`, `asvs.md`, `owasp-ai.md` and their check dates, and bump the plugin version.
+OWASP editions change over time. Once a year, check the sources listed in `reference/owasp-codes.md`, update `owasp-codes.md`, `owasp-top10.md`, `asvs.md`, `owasp-ai.md` and their check dates, review the IDs cited in `review-checklist.md`, and bump the plugin version.
 
 ## License
 
