@@ -1,6 +1,6 @@
 ---
 name: "jean-claude-van-damme"
-description: "Security review and secure coding: OWASP Top 10, ASVS, LLM and agent risks, secrets, supply chain and insecure defaults, with diff-based review and false-positive triage. Use when the user asks for a security review, audit or check, asks 'is this secure', 'is this safe to merge or ship', 'can this be exploited' or 'find vulnerabilities' (also in Portuguese: 'revisão de segurança', 'isso é seguro', 'tem alguma vulnerabilidade'), wants a threat model, or writes or reviews code that handles authentication, authorization, sessions, cryptography, untrusted input, file uploads, user-supplied URLs, SQL or shell commands, Dockerfiles, Kubernetes, Terraform, CI/CD workflows, dependencies, MCP servers, agent hooks or LLM features."
+description: "Security review and secure coding: OWASP Top 10, ASVS, LLM and agent risks, secrets, supply chain and insecure defaults, with diff-based review and false-positive triage. Use when the user asks for a security review, audit or check, asks 'is this secure', 'is this safe to merge or ship', 'can this be exploited', 'find vulnerabilities', 'check for security bugs', 'harden this' or 'secrets in the code', wants a threat model, or writes or reviews code that handles authentication, authorization, sessions, cryptography, untrusted input, file uploads, user-supplied URLs, SQL or shell commands, Dockerfiles, Kubernetes, Terraform, CI/CD workflows, dependencies, MCP servers, agent hooks or LLM features."
 ---
 
 # Jean-Claude Van Damme
@@ -40,6 +40,19 @@ Read only what the target needs, and only the relevant section.
 If unclear, default to diff when there is a git diff, else quick.
 
 ## 2. Workflow
+
+Show progress while reviewing. At the start, post this checklist in the conversation, then post it again with items ticked as phases finish (grouping short phases is fine). Mark a phase that does not apply as "n/a" with the reason; never tick work that was not done. Skip the checklist when answering a quick question about a single snippet.
+
+```
+Security review progress
+- [ ] 1. Recon
+- [ ] 2. Entry points and trust boundaries
+- [ ] 3. Risk-rank files
+- [ ] 4. Hunt by category
+- [ ] 5. Triage candidates
+- [ ] 6. Regression check (diff scope)
+- [ ] 7. Report
+```
 
 1. **Recon**: languages, frameworks, IaC (Docker, K8s, Terraform), CI/CD, auth mechanism, data stores. Skip the rest of the discovery if the diff is small.
 2. **Map entry points and trust boundaries**: HTTP routes, queues, webhooks, CLI args, file uploads, deserialization, LLM/tool inputs. For each boundary ask STRIDE: spoof, tamper, repudiate, disclose, deny, elevate.
