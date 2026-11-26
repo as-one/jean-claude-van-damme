@@ -1,7 +1,7 @@
 {
   "name": "jean-claude-van-damme",
   "description": "Security review and secure coding: OWASP Top 10, ASVS, LLM/agent risks, secrets, supply chain, insecure defaults, diff-based review with false-positive triage.",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "author": {
     "name": "As One Studio - Cesar Kohl"
   },

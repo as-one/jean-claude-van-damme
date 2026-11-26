@@ -21,6 +21,7 @@ Read only what the target needs, and only the relevant section.
 
 | File | Read when |
 |---|---|
+| `reference/review-checklist.md` | Hunting in a quick, full or large diff review: the sections the target touches |
 | `reference/owasp-codes.md` | Before tagging any finding with an OWASP or ASVS ID (short index) |
 | `reference/owasp-top10.md` | A category needs depth: what to look for, prevention, examples, false positives |
 | `reference/asvs.md` | Verifying against ASVS, or citing a requirement number or level |
@@ -43,7 +44,7 @@ If unclear, default to diff when there is a git diff, else quick.
 1. **Recon**: languages, frameworks, IaC (Docker, K8s, Terraform), CI/CD, auth mechanism, data stores. Skip the rest of the discovery if the diff is small.
 2. **Map entry points and trust boundaries**: HTTP routes, queues, webhooks, CLI args, file uploads, deserialization, LLM/tool inputs. For each boundary ask STRIDE: spoof, tamper, repudiate, disclose, deny, elevate.
 3. **Risk-rank files** (diff mode especially): HIGH = auth, authz, crypto, payments/value transfer, external calls, deserialization, shell/SQL/template construction; MEDIUM = business logic, validation, config; LOW = docs, tests, styling. Full depth on HIGH, surface scan on MEDIUM, skip LOW.
-4. **Hunt by category** (section 3). Trace source to sink for each candidate.
+4. **Hunt by category** (section 3), using the matching sections of `reference/review-checklist.md` to check coverage. Trace source to sink for each candidate.
 5. **Triage every candidate** (section 4) before it is reported.
 6. **For diffs: check regressions.** Did the change remove a check, loosen a validator, widen CORS/permissions, add a dependency or install script, or move a guard after the sink? Use git history/blame on removed security lines.
 7. **Report** (section 5).
