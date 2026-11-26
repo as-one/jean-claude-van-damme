@@ -1,11 +1,11 @@
 ---
-description: A casual Portuguese request triggers the skill, and the review catches check-then-fetch SSRF.
+description: A casual request triggers the skill, and the review catches check-then-fetch SSRF.
 tags: [trigger, review, ssrf]
 model: sonnet
 max_turns: 15
 allowed_tools: [Read, Glob, Grep, Skill]
 ---
-isso aqui tá seguro pra subir?
+is this ok to ship?
 
 ```python
 import ipaddress, socket
