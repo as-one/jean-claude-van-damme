@@ -27,7 +27,34 @@ const SKILL_SAMPLES = {
 };
 
 // Every regex or input_match grader needs samples here.
+// For "match: not_contains" graders, "match" lists text the grader must catch.
 const SAMPLES = {
+  "llm-agent-2026-ids/cites-2026-pairs.md": {
+    match: [
+      "LLM01 Prompt Injection and LLM10 Improper Output Handling",
+      "**LLM01:2026** - Prompt Injection\n| LLM03 | Excessive Agency |",
+      "Tags: LLM03 Excessive Agency, then LLM10: Improper Output Handling",
+    ],
+    reject: [
+      "LLM01 Prompt Injection only",
+      "LLM01 Prompt Injection, LLM01 Prompt Injection again",
+      "LLM01:2025 Prompt Injection, LLM05:2025 Improper Output Handling, LLM06:2025 Excessive Agency",
+      "Prompt injection leads to excessive agency and improper output handling.",
+    ],
+  },
+  "llm-agent-2026-ids/no-2025-pairs.md": {
+    match: [
+      "LLM05 Improper Output Handling",
+      "**LLM06** - Excessive Agency",
+      "LLM10: Unbounded Consumption",
+      "see LLM01:2025",
+    ],
+    reject: [
+      "LLM10 Improper Output Handling \u00b7 LLM03 Excessive Agency \u00b7 LLM06 Unbounded Consumption",
+      "LLM05 Data and Model Poisoning",
+      "LLM01:2026 Prompt Injection",
+    ],
+  },
   "real-sql-injection/report-format.md": {
     match: [
       "- Location: a.js:8\n- Path: q -> query\n- Impact: data read\n- Fix: bind it",
@@ -138,6 +165,9 @@ for (const name of cases) {
       else {
         usedSamples.add(id);
         sampleCount += checkPattern(id, meta.pattern, meta.flags ?? "", SAMPLES[id]);
+        if (meta.match && !/^(not_contains|count:\d+)$/.test(meta.match)) {
+          fail(id, `unknown "match" value "${meta.match}"`);
+        }
       }
     } else if (meta.type === "tool_used") {
       if (!meta.tool) fail(id, 'tool_used grader without "tool"');
