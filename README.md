@@ -115,13 +115,9 @@ Run them before and after changing the skill. Results are written to `evals/resu
 
 OWASP editions change over time. Once a year, check the sources listed in `reference/owasp-codes.md`, update `owasp-codes.md`, `owasp-top10.md`, `asvs.md`, `owasp-ai.md` and their check dates, and bump the plugin version.
 
-## Credits
-
-The split into on-demand reference files, the eval approach and the "every step is possible for the attacker" triage rule were inspired by [agamm/claude-code-owasp](https://github.com/agamm/claude-code-owasp) (MIT). The text here was written for this project. OWASP and ASVS names and IDs belong to the OWASP Foundation.
-
 ## License
 
-MIT (see [LICENSE](LICENSE)), except for the reference files that summarize OWASP material:
+MIT (see [LICENSE](LICENSE)), except for the reference files that summarize OWASP material (OWASP and ASVS names and IDs belong to the OWASP Foundation):
 
 | File in `reference/` | Terms |
 |---|---|
