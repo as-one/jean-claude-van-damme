@@ -1,6 +1,6 @@
 # OWASP and ASVS Codes
 
-Use these IDs when tagging findings. Always write the ID together with its name.
+Short index of IDs for tagging findings. Always write the ID together with its name. For depth, see `owasp-top10.md`, `owasp-ai.md` and `asvs.md`.
 
 **Last checked against official sources: 2026-11-26.** Refresh once a year, or sooner when OWASP publishes a new edition.
 
@@ -70,7 +70,7 @@ Use together with the LLM list when the system plans, calls tools or keeps memor
 
 ## ASVS 5.0
 
-IDs from ASVS 4.0 do not carry over to 5.0. Cite 5.0 IDs only. If a requirement is not listed below, name the chapter instead of guessing a number, or look it up in the official source.
+IDs from ASVS 4.0 do not carry over to 5.0. Cite 5.0 IDs only. If a requirement is not in `asvs.md`, name the chapter instead of guessing a number, or look it up in the official source.
 
 **Levels:** L1 is the minimum (about 20% of requirements). L2 is the target for most applications (about 70% cumulative). L3 adds the rest, for the highest assurance.
 
@@ -88,55 +88,7 @@ IDs from ASVS 4.0 do not carry over to 5.0. Cite 5.0 IDs only. If a requirement 
 | V8 | Authorization | V17 | WebRTC |
 | V9 | Self-contained Tokens | | |
 
-### Requirements most often cited in reviews
-
-| Requirement | Level | Summary |
-|---|---|---|
-| 1.2.1 | L1 | Output encoding fits the HTTP, HTML or XML context |
-| 1.2.2 | L1 | URLs built from untrusted data are encoded and limited to safe protocols |
-| 1.2.3 | L1 | Data placed in JavaScript or JSON is encoded |
-| 1.2.4 | L1 | Database queries are parameterized |
-| 1.2.5 | L1 | OS calls are protected against command injection |
-| 1.3.2 | L1 | No `eval` or similar dynamic code execution |
-| 1.5.1 | L1 | XML parsers disable external entities |
-| 1.5.2 | L2 | Deserialization of untrusted data is restricted to safe types and mechanisms |
-| 2.2.1 | L1 | Input is validated against what the business logic expects |
-| 2.2.2 | L1 | Validation happens in a trusted server-side layer |
-| 2.3.1 | L1 | Business flows cannot skip or reorder steps |
-| 3.5.1 | L1 | Sensitive cross-origin requests are verified (CSRF) when preflight does not block them |
-| 5.2.1 | L1 | Accepted file sizes cannot cause denial of service |
-| 5.3.2 | L1 | File paths use trusted data, or strictly validated user input |
-| 6.2.1 | L1 | Passwords have at least 8 characters (15 recommended) |
-| 6.2.4 | L1 | Reject new passwords found in a list of the 3000 or more most common |
-| 6.2.5 | L1 | No character-composition rules |
-| 6.2.12 | L2 | New passwords are checked against breached passwords |
-| 6.3.1 | L1 | Credential stuffing and brute force are controlled |
-| 6.3.2 | L1 | No active default accounts |
-| 6.3.3 | L2 | Multi-factor access (L3 requires a phishing-resistant hardware factor) |
-| 7.2.1 | L1 | Session tokens are verified by a trusted backend |
-| 7.2.3 | L1 | Opaque session tokens are random (CSPRNG, 128 bits or more) |
-| 7.2.4 | L1 | Authentication issues a new token and ends the previous one |
-| 7.4.1 | L1 | A terminated session cannot be reused |
-| 8.2.1 | L1 | Function access requires explicit permission |
-| 8.2.2 | L1 | Data access is checked per object (IDOR, BOLA) |
-| 8.3.1 | L1 | Authorization is enforced server-side |
-| 9.1.1 | L1 | Token signature or MAC is verified before the content is trusted |
-| 9.1.2 | L1 | Token algorithms are allowlisted and `none` is rejected |
-| 9.2.1 | L1 | Token validity window is enforced |
-| 11.3.1 | L1 | No ECB or weak padding |
-| 11.3.2 | L1 | Encryption sticks to approved algorithms and modes (AES-GCM, for example) |
-| 11.4.2 | L2 | Passwords use a slow, approved password hash |
-| 11.5.1 | L2 | Unguessable values come from a CSPRNG with 128 bits; UUIDs do not qualify |
-| 12.1.1 | L1 | Only current TLS versions are enabled |
-| 12.2.1 | L1 | External HTTP traffic uses TLS with no plaintext fallback |
-| 12.2.2 | L1 | External services use publicly trusted certificates |
-| 13.3.1 | L2 | Backend secrets are in a secrets manager, never in source or artifacts |
-| 13.4.1 | L1 | Version control metadata is not exposed in deployments |
-| 14.2.1 | L1 | Sensitive data never goes in URLs or query strings |
-| 16.3.1 | L2 | Successful and failed authentication is logged |
-| 16.3.2 | L2 | Failed authorization is logged (L3: all authorization decisions) |
-| 16.5.1 | L2 | Error responses are generic and leak no internals |
-| 16.5.3 | L2 | Failures are handled securely, never fail-open |
+Requirement IDs and levels are in `asvs.md`.
 
 ## Sources and licenses
 
