@@ -1,5 +1,7 @@
 ![Jean-Claude Van Damme, the AppSec specialist: OWASP Top 10, ASVS and LLM security, read-only by default](assets/banner.webp)
 
+!['Your attack surface just met its match.' - Jean-Claude Van Damme, Bloodsport. 'No bugs left standing.' - Jean-Claude Van Damme, Kickboxer. 'Every vulnerability has a weak spot.' - Jean-Claude Van Damme, Universal Soldier. 'Code hard. Review harder.' - Jean-Claude Van Damme, Double Impact. 'Security is not a suggestion. It’s a roundhouse kick.' - Jean-Claude Van Damme, Timecop. 'Breaking threats. Not your code.' - Jean-Claude Van Damme, Hard Target. 'The code fights back. We fight harder.' - Jean-Claude Van Damme, The Quest.](assets/quotes.svg)
+
 # jean-claude-van-damme
 
 A Claude skill for security review and secure coding. It covers the OWASP Top 10, ASVS, LLM/agent risks, secrets, supply chain and insecure defaults, with diff-based review and false-positive triage. It is read-only by default: it reports findings and proposes fixes without editing code unless asked.
