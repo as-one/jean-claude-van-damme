@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="302" viewBox="0 0 1000 302">
+  <rect width="1000" height="302" rx="10" fill="#070b1a"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-style="italic" text-anchor="middle">
+    <text x="500" y="44" fill="#35c8f5">“Your attack surface just met its match.” — Jean-Claude Van Damme, <tspan fill="#ff2e3a" font-weight="700">Bloodsport</tspan></text>
+    <text x="500" y="82" fill="#35c8f5">“No bugs left standing.” — Jean-Claude Van Damme, <tspan fill="#ff2e3a" font-weight="700">Kickboxer</tspan></text>
+    <text x="500" y="120" fill="#35c8f5">“Every vulnerability has a weak spot.” — Jean-Claude Van Damme, <tspan fill="#ff2e3a" font-weight="700">Universal Soldier</tspan></text>
+    <text x="500" y="158" fill="#35c8f5">“Code hard. Review harder.” — Jean-Claude Van Damme, <tspan fill="#ff2e3a" font-weight="700">Double Impact</tspan></text>
+    <text x="500" y="196" fill="#35c8f5">“Security is not a suggestion. It’s a roundhouse kick.” — Jean-Claude Van Damme, <tspan fill="#ff2e3a" font-weight="700">Timecop</tspan></text>
+    <text x="500" y="234" fill="#35c8f5">“Breaking threats. Not your code.” — Jean-Claude Van Damme, <tspan fill="#ff2e3a" font-weight="700">Hard Target</tspan></text>
+    <text x="500" y="272" fill="#35c8f5">“The code fights back. We fight harder.” — Jean-Claude Van Damme, <tspan fill="#ff2e3a" font-weight="700">The Quest</tspan></text>
+  </g>
+</svg>
