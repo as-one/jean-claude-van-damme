@@ -38,8 +38,31 @@ Ask Claude for a security review, for example "review my changes for security is
   marketplace.json
 skills/
   jean-claude-van-damme/
-    SKILL.md
+    SKILL.md               # workflow, triage rubric, report format
+    reference/             # read only when the review needs it
+      owasp-codes.md       # OWASP Top 10, LLM, Agentic and ASVS IDs
+      languages.md         # pitfalls per language
+      iac-and-ci.md        # CI/CD, dependencies, containers, Kubernetes, Terraform
+evals/                     # test cases for `claude plugin eval`
 ```
+
+## Evals
+
+The command compares results with the skill against a baseline without it. It calls real models and is charged to your account, so set a ceiling with `--max-cost-usd`.
+
+```bash
+claude plugin eval . --no-publish --max-cost-usd 5
+```
+
+Run them before and after changing the skill. Results are written to `evals/results/`, which is ignored by Git.
+
+## Updating the codes
+
+OWASP editions change over time. Once a year, check the sources listed in `reference/owasp-codes.md`, update the tables and the "last checked" date, and bump the plugin version.
+
+## Credits
+
+The split into on-demand reference files, the eval approach and the "every step is possible for the attacker" triage rule were inspired by [agamm/claude-code-owasp](https://github.com/agamm/claude-code-owasp) (MIT). The text here was written for this project. OWASP and ASVS names and IDs belong to the OWASP Foundation; see `reference/owasp-codes.md` for sources and licenses.
 
 ## License
 
